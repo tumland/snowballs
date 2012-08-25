@@ -1,0 +1,29 @@
+name: Snowballs
+main: com.coffeejawa.Snowball.Snowballs
+version: 0.5
+authors: [tumland]
+description: Snowballs allows players to freeze other players by hitting them with snowballs.
+
+commands:
+    snowballs:
+        description: Root command for all Snowball Commands.
+        aliases: sb
+        usage: /sb <on|off> [freeze time]
+        permission: sb.help
+        permission-message: You require permission mcd.help to do that.
+        
+permissions:
+    sb.*:
+        description: Gives access to all mcDungeons commands/functions.
+        default: op
+        children:
+            sb.control: true
+            sb.help: true
+
+    sb.control:
+        description: Allows user to enable/disable Snowballs.
+        default: false
+        
+    sb.help:
+        description: Allows user to view command help text.
+        default: false
