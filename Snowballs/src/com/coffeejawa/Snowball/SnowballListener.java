@@ -52,7 +52,7 @@ public class SnowballListener implements Listener{
     @EventHandler
     public void OnEntityMove(PlayerMoveEvent event){
         // ignore if not enabled
-        if(plugin.getConfig().getBoolean("enabled")){
+        if(!plugin.getConfig().getBoolean("enabled")){
             return;
         }
         
